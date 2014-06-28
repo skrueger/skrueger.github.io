@@ -1,0 +1,7 @@
+* {
+    font-family: verdana, sans-serif;
+}
+
+nav ul, #contact ul {
+    list-style-type: none;
+}
