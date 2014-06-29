@@ -1,51 +1,59 @@
-<!doctype html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta content="Simon Krueger's website" name="description" />
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <meta content="en-us" http-equiv="Content-Language" />
-    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link type="text/css" rel="stylesheet" href="style.css" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device, initial-scale=1.0">
     <title>Simon Krueger</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="simonkrueger.css">
   </head>
   <body>
-    <header>
-      <h1>Simon Krueger</h1>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="home.html">home</a></li>
-        <li><a href="about.html">about</a></li>
-      </ul>
-    </nav>
-    <section id="about_me">
-    <h2>About me</h2>
-        <p>
-        I'm Simon Krueger. I grew up around Chicago, IL and I went to school at the University of Illinois at Urbana-Champaign. I've briefly lived in Mountain View, CA for a summer and since 2011 I've lived in Seattle, WA.
-        </p>
-        <p>I'm a software engineer.</p>
-        <p>I work for Microsoft on the contact service for Skype, Windows Phone, and other Microsoft products.</p>
-        <p>Before that I worked on the Live Connect platform. I wrote client libraries for Android, Windows Phone, Windows 8, and JavaScript. This work can be found on GitHub.</p>
-        <p>In 2009, I was an intern at Mozilla where I worked inside on their metric team. I analyzing various aspects and products of Mozilla. My final presentation</p>
-        <p>In 2008, I interned at Yahoo! in University of Illionis's Research Park. I worked on two projects. An internal web application to visualize their datacenters and a Hadoop MapReduce job to replace a stage in their advertisement data pipeline processing system.</p>
-        <p>I love learning. I find everything in this world fascinating. I believe the things I learn will help me or someone else in the future.</p>
-        <p>I am a big health enthusiast. I run, bike, weight lift, yoga and play soccer regularly.  I love doing these  I'm a huge music fan. I am working on my Salsa, Batcha, and Kizomba dancing.</p>
-        <p>I volunteer as a Big Brother in the Big Brothers Big Sisters program.</p>
-        <p>
-    </section>
-    <section id="the_site">
-      <p>I web this website using the vim text editor.</p>
-    </section>
-    <section id="contact">
-    <ul>
-      <li><a href="http://github.com/skrueger">GitHub</a></li>
-      <li><a href="http://www.linkedin.com/pub/simon-krueger/17/a55/383">LinkedIn</a></li>
-      <li><a href="https://twitter.com/simonkrueger">Twitter</a></li>
-    </ul>
-    </section>
-    <aside>
-    </aside>
-    <footer>2014 &copy;  Simon Krueger</footer>
-  </body>
+    <div class="container">
+      <div class="header">
+        <h1 class="header-title">Simon Krueger</h1>
+        <p class="lead header-description">My personal blog where I post about my interests, projects and thoughts.<p>
+      </div>
+      <div class="row">
+        <div class="col-sm-8 main">
+          <div class="post">
+            <h2 class="post-title">Up and running, again</h2>
+            <p class="post-meta">Wednesday, May 14th 2014</p>
+            <p>Apparently this site has been down for over a year. The amazon ec2 instance that was running the server was shut down since Feburary 2013. I restarted it with no problems and had the public key to login still on my box with putty configured properly.  Everything seems to be working pretty well. I got inspired to work on this again from watching a plural insight video. I will making more posts and start growing this site. I first need a better way to edit its content. I am not going to use wordpress or any other CMS. I'll come up with my own system that works well. Maybe just edit locally + SCP. We'll see.</p>
+          </div>
+        </div>
+        <div class="col-sm-3 col-sm-offset-1 sidebar">
+          <div class="sidebar-module sidebar-module-about">
+            <img src="about.jpg" class="img-circle sidebar-module-about-img" />
+            <h4>About</h4>
+            <p>I'm a software engineer at Microsoft.</p>
+            <p>I currently reside in Seattle, WA. I grew up in the suburbs of Chicago, IL and spent most of my life there.  I studied computer science at <a href="http://cs.illinois.edu/">UIUC</a>.</p>
+            <p>I love learning.  I run, bike, weight lift and practice yoga.  I'm a huge music fan. I dance Batcha and Kizomba. I'm a <a href="https://www.bbbsps.org/">Big Brother</a>.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Disclamer</h4>
+            <p>The views expressed on this blog are mine and do not necessarily reflect the views of my employer.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="http://github.com/skrueger">GitHub</a></li>
+              <li><a href="http://www.linkedin.com/pub/simon-krueger/17/a55/383">LinkedIn</a></li>
+              <li><a href="https://twitter.com/simonkrueger">Twitter</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="footer">
+          <p>Copyright &copy; 2014 Simon Krueger. All rights reserved.</p>
+          <p><a href="#">Back to top</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
 </html>
