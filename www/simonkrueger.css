@@ -1,5 +1,13 @@
+.header-title {
+  margin-bottom: 0;
+}
+
 .header-description {
   color: #999;
+}
+
+.post-title {
+  margin-bottom: 0;
 }
 
 .post-meta {
