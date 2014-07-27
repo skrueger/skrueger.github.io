@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/simonkrueger.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 class="header-title">Simon Krueger</h1>
+        <p class="lead header-description">My personal blog where I post about my interests, projects and thoughts<p>
+      </div>
+      <div class="row">
+        <div class="col-sm-8 main">
+            {{ content }}
+        </div>
+        <div class="col-sm-3 col-sm-offset-1 sidebar">
+          <div class="sidebar-module sidebar-module-about">
+            <img alt="A head shot of me, Simon Krueger" src="/images/about.jpg" class="img-circle sidebar-module-about-img" />
+            <h4>About</h4>
+            <p>I'm a software engineer at Microsoft.</p>
+            <p>I currently reside in Seattle, WA. I grew up in the suburbs of Chicago, IL and spent most of my life there.  I studied computer science at <a href="http://cs.illinois.edu/">UIUC</a>.</p>
+            <p>I love learning.  I run, bike, weight lift and practice yoga.  I'm a huge music fan. Occasionally, I'll go to karaoke. I dance Batcha and Kizomba. I'm a <a href="https://www.bbbsps.org/">Big Brother</a>.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Disclaimer</h4>
+            <p>The views expressed on this blog are mine and do not necessarily reflect the views of my employer.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="http://github.com/skrueger">GitHub</a></li>
+              <li><a href="http://www.linkedin.com/pub/simon-krueger/17/a55/383">LinkedIn</a></li>
+              <li><a href="https://twitter.com/simonkrueger">Twitter</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+              <h4>Posts</h4>
+              <ol class="list-unstyled">
+                {% for post in site.posts %}
+                  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endfor %}
+              </ol>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="footer">
+          <p>Copyright &copy; 2014 Simon Krueger. All rights reserved.</p>
+          <p><a href="#">Back to top</a></p>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
