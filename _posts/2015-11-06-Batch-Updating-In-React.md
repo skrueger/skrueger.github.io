@@ -5,7 +5,7 @@ layout: post
 <p class="post-meta">Friday, November 6th 2015</p>
 <p>
 This post talks about how <a href='https://facebook.github.io/react/index.html'>React</a> components perform updates for different types of events and how
-we can get these updates under our control to behave in a way that is ideal for us.
+we can get these updates to behave in a way that is ideal when using AJAX actions that update multiple <a href='https://facebook.github.io/flux/'>Flux</a> stores.
 </p>
 
 <h3>SyntheticEvents</h3>
@@ -13,7 +13,7 @@ we can get these updates under our control to behave in a way that is ideal for 
 React components will batch their updates inside of <a href='https://facebook.github.io/react/docs/events.html'>Events</a>.
 This means that when a component's <code>setState</code> function is called
 multiple times inside of an <code>OnClick</code> event, the component will only call <code>render</code> once (if <code>shouldComponentUpdate</code> returns <code>true</code>).
-This is exactly the behavior I want to have because I want to make sure when I interact with a store's data, it and all the other stores are in a complete, stable, and ready state.
+This is exactly the behavior I want.  I only want to interact with stores that are in a complete, stable, and ready state.
 </p>
 <h3>AJAX and timeout events</h3>
 <p>
@@ -61,7 +61,7 @@ AppStore.dispatchToken = AppDispatcher.register(action => {
 });
 
 var OtherStore1 = {
-  // Some stuff...
+  // Store state...
 };
 
 OtherStore1.dispatchToken = AppDispatcher.register(action => {
@@ -74,7 +74,7 @@ OtherStore1.dispatchToken = AppDispatcher.register(action => {
 });
 
 var OtherStore2 = {
-  // Some stuff...
+  // Store state...
 };
 
 OtherStore2.dispatchToken = AppDispatcher.register(action => {
@@ -105,7 +105,7 @@ var App = Reat.createClass({
   },
 
   render() {
-    // Store are in a stable complete state invariant holds! \o/
+    // Stores are in a stable complete state invariant holds! \o/
   },
 });
 {% endhighlight %}
